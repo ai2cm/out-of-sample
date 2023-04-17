@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  generateName: prognostic-diags-save-
+spec:
+  volumes:
+    - name: gcp-credentials-user-gcp-sa
+      secret:
+        secretName: gcp-key
+  containers:
+    - name: main
+      image: us.gcr.io/vcm-ml/fv3net:9143afccc11edc9441439189aaea19d8161e59a4
+      workingDir: /home/jovyan/fv3net/workflows/dataflow
+      env:
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /secret/gcp-credentials/key.json
+        - name: CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE
+          value: /secret/gcp-credentials/key.json
+      volumeMounts:
+        - mountPath: /secret/gcp-credentials
+          name: gcp-credentials-user-gcp-sa
+      command: 
+      - prognostic_run_diags
+      - save
+      - gs://vcm-ml-experiments/default/2021-05-25/control-mp-no-ml-rad/fv3gfs_run
+      - gs://vcm-ml-experiments/default/2021-05-25/control-mp-no-ml-rad/prognostic_run_diags
+      resources:
+        limits:
+          memory: 10Gi
+          cpu: "4000m"
+        requests:
+          memory: 10Gi
+          cpu: "4000m"
+  tolerations:
+    - effect: NoSchedule
+      key: dedicated
+      value: med-sim-pool
+  restartPolicy: Never
