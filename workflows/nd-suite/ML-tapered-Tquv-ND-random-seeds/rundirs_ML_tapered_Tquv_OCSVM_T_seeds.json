@@ -1,0 +1,22 @@
+[
+    {
+      "url": "gs://vcm-ml-experiments/claytons/2022-08-10/baseline-trial2/fv3gfs_run",
+      "name": "baseline"
+    },
+    {
+      "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial0/fv3gfs_run",
+      "name": "ML-tapered-Tquv-OCSVM-T-seed-0"
+    },
+    {
+      "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial1/fv3gfs_run",
+      "name": "ML-tapered-Tquv-OCSVM-T-seed-1"
+    },
+    {
+      "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial2/fv3gfs_run",
+      "name": "ML-tapered-Tquv-OCSVM-T-seed-2"
+    },
+    {
+      "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial3/fv3gfs_run",
+      "name": "ML-tapered-Tquv-OCSVM-T-seed-3"
+    }
+  ]
