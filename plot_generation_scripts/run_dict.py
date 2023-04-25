@@ -22,47 +22,51 @@ RUN_DICT = {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-25/ml-tapered-all-tquv-seed-0/",
         "alg": ML_ONLY_ALG
     },
-    "minmax_T": {
-        "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-minmax-0-default-0-trial0/",
-        "alg": MINMAX_ALG,
-        "cutoff": 0,
-        "cutoff_true": 0
-    },
-    "ocsvm_T": {
-        "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial0/",
-        "alg": OCSVM_ALG,
-        "cutoff": 0,
-        "gamma": 4/79,
-        "cutoff_true": 0
-    },
+    #"minmax_T": {
+    #    "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-minmax-0-default-0-trial0/",
+    #    "alg": MINMAX_ALG,
+    #    "cutoff": 0,
+    #    "cutoff_true": 0
+    #},
+    #"ocsvm_T": {
+    #    "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-t-0-default-0-trial0/",
+    #    "alg": OCSVM_ALG,
+    #    "cutoff": 0,
+    #    "gamma": 4/79,
+    #    "cutoff_true": 0
+    #},
     # gamma = 1/79
     "ocsvm-gamma-1_79-95pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-1_79-nu-5e-3--221.6/",
         "alg": OCSVM_ALG,
         "gamma": 1/79,
         "cutoff": -221.6,
-        "cutoff_true": 226.8
+        "cutoff_true": 226.8,
+        "percent_reference_in_sample":  99.41
     },
     "ocsvm-gamma-1_79-75pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-1_79-nu-5e-3--283.5/",
         "alg": OCSVM_ALG,
         "gamma": 1/79,
         "cutoff": -283.5,
-        "cutoff_true": 288.7
+        "cutoff_true": 288.7,
+         "percent_reference_in_sample": 89.38
     },
     "ocsvm-gamma-1_79-50pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-1_79-nu-5e-3--315/",
         "alg": OCSVM_ALG,
         "gamma": 1/79,
         "cutoff": -315,
-        "cutoff_true": 321
+        "cutoff_true": 321,
+         "percent_reference_in_sample":  69.95
     },
     "ocsvm-gamma-1_79-25pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-1_79-nu-5e-3--346/",
         "alg": OCSVM_ALG,
         "gamma": 1/79,
         "cutoff": -346,
-        "cutoff_true": 351.5
+        "cutoff_true": 351.5,
+         "percent_reference_in_sample": 44.55
     },
     # gamma = 2/79
     "ocsvm-gamma-2_79-99pct": {
@@ -70,35 +74,40 @@ RUN_DICT = {
         "alg": OCSVM_ALG,
         "gamma": 2/79,
         "cutoff": -20.7,
-        "cutoff_true": 22.3
+        "cutoff_true": 22.3,
+         "percent_reference_in_sample": 99.98
     },
     "ocsvm-gamma-2_79-95pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-2_79-nu-5e-3--40.0/",
         "alg": OCSVM_ALG,
         "gamma": 2/79,
         "cutoff": -40.0,
-        "cutoff_true": 41.7
+        "cutoff_true": 41.7,
+         "percent_reference_in_sample": 99.67
     },
     "ocsvm-gamma-2_79-75pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-2_79-nu-5e-3--58.7/",
         "alg": OCSVM_ALG,
         "gamma": 2/79,
         "cutoff": -58.7,
-        "cutoff_true": 60.3
+        "cutoff_true": 60.3,
+         "percent_reference_in_sample": 94.15
     },
     "ocsvm-gamma-2_79-50pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-2_79-nu-5e-3--68.6/",
         "alg": OCSVM_ALG,
         "gamma": 2/79,
         "cutoff": -68.6,
-        "cutoff_true": 70.3
+        "cutoff_true": 70.3,
+         "percent_reference_in_sample": 78.34
     },
     "ocsvm-gamma-2_79-25pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-18/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-2_79-nu-5e-3--78.0/",
         "alg": OCSVM_ALG,
         "gamma": 2/79,
         "cutoff": -78.0,
-        "cutoff_true": 79.7
+        "cutoff_true": 79.7,
+         "percent_reference_in_sample": 52.5
     },
     # gamma = 4/79
     "ocsvm-gamma-4_79-99pct": {
@@ -106,35 +115,40 @@ RUN_DICT = {
         "alg": OCSVM_ALG,
         "gamma": 4/79,
         "cutoff": 0.095,
-        "cutoff_true": 0.025
+        "cutoff_true": 0.025,
+         "percent_reference_in_sample": 99.99
     },
     "ocsvm-gamma-4_79-95pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-4_79-nu-1e-4-0.055/",
         "alg": OCSVM_ALG,
         "gamma": 4/79,
         "cutoff": 0.055,
-        "cutoff_true": 0.065
+        "cutoff_true": 0.065,
+         "percent_reference_in_sample": 99.82
     },
     "ocsvm-gamma-4_79-75pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-01-24/oos-tapered-tquv-nd-ocsvm-tq-0-default-0-trial0/",
         "alg": OCSVM_ALG,
         "gamma": 4/79,
         "cutoff": 0,
-        "cutoff_true": 0.12
+        "cutoff_true": 0.12,
+         "percent_reference_in_sample": 97.41
     },
     "ocsvm-gamma-4_79-50pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-4_79-nu-1e-4--0.03/",
         "alg": OCSVM_ALG,
         "gamma": 4/79,
         "cutoff": -0.03,
-        "cutoff_true": 0.15
+        "cutoff_true": 0.15,
+         "percent_reference_in_sample": 87.96
     },
     "ocsvm-gamma-4_79-25pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-4_79-nu-1e-4--0.05/",
         "alg": OCSVM_ALG,
         "gamma": 4/79,
         "cutoff": -0.05,
-        "cutoff_true": 0.17
+        "cutoff_true": 0.17,
+         "percent_reference_in_sample": 65.14
     },
     # gamma = 8/79
     "ocsvm-gamma-8_79-99pct": {
@@ -142,35 +156,40 @@ RUN_DICT = {
         "alg": OCSVM_ALG,
         "gamma": 8/79,
         "cutoff": 0.00032,
-        "cutoff_true": 1.7e-5
+        "cutoff_true": 1.7e-5,
+         "percent_reference_in_sample": 99.99
     },
     "ocsvm-gamma-8_79-95pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-8_79-nu-4e-6-0.00024/",
         "alg": OCSVM_ALG,
         "gamma": 8/79,
         "cutoff": 0.00024,
-        "cutoff_true": 9.3e-5
+        "cutoff_true": 9.3e-5,
+         "percent_reference_in_sample": 99.89
     },
     "ocsvm-gamma-8_79-75pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-8_79-nu-4e-6-5.3e-05/",
         "alg": OCSVM_ALG,
         "gamma": 8/79,
         "cutoff": 5.3e-05,
-        "cutoff_true": 2.8e-4
+        "cutoff_true": 2.8e-4,
+         "percent_reference_in_sample": 98.67
     },
     "ocsvm-gamma-8_79-50pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-8_79-nu-4e-6--0.00011/",
         "alg": OCSVM_ALG,
         "gamma": 8/79,
         "cutoff": -0.00011,
-        "cutoff_true": 4.4e-4
+        "cutoff_true": 4.4e-4,
+         "percent_reference_in_sample": 94.2
     },
     "ocsvm-gamma-8_79-25pct": {
         "url": "gs://vcm-ml-experiments/out-of-sample-right-side-up-winds/2023-02-21/ocsvm_tq_sensitivity_final-ocsvm-tq-gamma-8_79-nu-4e-6--0.00026/",
         "alg": OCSVM_ALG,
         "gamma": 8/79,
         "cutoff": -0.00026,
-        "cutoff_true": 5.9e-4
+        "cutoff_true": 5.9e-4,
+         "percent_reference_in_sample": 79.1
     },
 }
 
